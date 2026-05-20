@@ -1,0 +1,641 @@
+1. College website:
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Bharathiyar University</title> 
+    <style> 
+        body { 
+ 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #f4f6f9; 
+        } 
+        header { 
+            background: #002147; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+        } 
+        nav { 
+            background: #064579; 
+            padding: 10px; 
+        } 
+        nav a { 
+            color: white; 
+            margin: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+        } 
+        section { 
+            padding: 20px; 
+        } 
+        article { 
+            background: white; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 5px; 
+ 
+        } 
+        footer { 
+            background: #002147; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+        } 
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            background: white; 
+        } 
+        th, td { 
+            padding: 12px; 
+            border: 1px solid #ccc; 
+        } 
+        iframe { 
+            width: 100%; 
+            height: 300px; 
+            border: none; 
+        } 
+    </style> 
+</head> 
+<body> 
+<header> 
+    <h1> Bharathiyar University </h1> 
+    <p>"Educate, Empower, Enlighten"</p> 
+</header> 
+<nav> 
+    <a href="#about">About</a> 
+    <a href="#courses">Courses</a> 
+    <a href="#contact">Contact</a> 
+</nav> 
+<section id="about"> 
+    <article> 
+        <h2>About Our University</h2> 
+        <p>Bharathiyar University is one of the leading educational institutions offering quality 
+education in arts, science, engineering and advanced research.</p> 
+        <!-- Advanced HTML Tag: <details> --> 
+        <details> 
+            <summary>Read More About Our History</summary> 
+            <p>Founded in 1982, the university is named after the great Tamil poet Subramania 
+Bharathiyar.</p> 
+        </details> 
+    </article> 
+</section> 
+<section id="courses"> 
+    <article> 
+        <h2>Available Courses</h2> 
+        <!-- Advanced HTML Tag: Table --> 
+        <table> 
+            <tr> 
+                <th>Course Name</th> 
+                <th>Duration</th> 
+                <th>Type</th> 
+            </tr> 
+            <tr> 
+                <td>B.Sc Computer Science</td> 
+                <td>3 Years</td> 
+                <td>Full-time</td> 
+            </tr> 
+            <tr> 
+                <td>BBA</td> 
+                <td>3 Years</td> 
+                <td>Full-time</td> 
+            </tr> 
+            <tr> 
+                <td>MCA</td> 
+                <td>2 Years</td> 
+                <td>Post Graduate</td> 
+            </tr> 
+        </table> 
+    </article> 
+</section> 
+<section id="contact"> 
+    <article> 
+        <h2>Contact Us</h2> 
+        <!-- Advanced HTML Tag: HTML5 Form --> 
+        <form> 
+            <label>Name: </label> 
+            <input type="text" placeholder="Enter your name" required><br><br> 
+            <label>Email: </label> 
+            <input type="email" placeholder="Enter your email" required><br><br> 
+            <label>Message: </label><br> 
+            <textarea rows="5" cols="40"></textarea><br><br> 
+            <button type="submit">Submit</button> 
+        </form> 
+    </article> 
+</section> 
+<footer> 
+    <p>© 2025 Bharathiyar University. All Rights Reserved.</p> 
+</footer> 
+</body> 
+</html>  
+--------------------------------------------------------------------
+2. Hyperlinks:
+
+<!DOCTYPE html> 
+<html> 
+<head>    <title>World Countries</title> </head> 
+<body> 
+    <h2>World Page</h2> 
+    <p> 
+        Click on a country to know more: 
+        <a href="India.html">India</a>, 
+        <a href="Japan.html">Japan</a>, 
+        <a href="US.html">United States</a> 
+    </p> 
+</body> 
+</html> 
+
+
+India.html 
+<!DOCTYPE html> 
+<html> 
+<head>    <title>India</title></head> 
+<body> 
+    <h2>India</h2> 
+    <p>India is a country in South Asia known for its rich culture, diversity, and history.</p> 
+    <a href="world.html">Back to World</a> 
+</body>   </html> 
+
+
+Japan.html 
+<!DOCTYPE html> 
+<html> 
+<head>    <title>Japan</title></head> 
+<body> 
+    <h2>Japan</h2> 
+    <p>Japan is an East Asian island nation famous for its technology, tradition, and cuisine.</p> 
+    <a href="world.html">Back to World</a> 
+</body> 
+</html> 
+
+
+US.html 
+<!DOCTYPE html> 
+<html> 
+<head>    <title>United States</title></head> 
+<body> 
+    <h2>United States</h2> 
+    <p>The United States is a country in North America known for its economy, innovation, and 
+global influence.</p> 
+    <a href="world.html">Back to World</a> 
+</body> 
+</html> 
+---------------------------------------------------------
+3. List and Table:
+<!DOCTYPE html> 
+<html> 
+<head>    <title>Lists and Tables Example</title></head> 
+<body> 
+<h2>Displaying Text Using Lists</h2> 
+<h3>Unordered List:</h3> 
+<ul> 
+    <li>HTML</li> 
+    <li>CSS</li> 
+    <li>JavaScript</li> 
+</ul> 
+<h3>Ordered List:</h3> 
+<ol> 
+    <li>Red</li> 
+    <li>Green</li> 
+    <li>Blue</li> 
+</ol> 
+<h2>Displaying Text Using Table</h2> 
+<table border="1" cellpadding="8"> 
+    <tr> 
+        <th>Name</th> 
+        <th>Department</th> 
+        <th>Year</th> 
+    </tr> 
+    <tr> 
+        <td>Asha</td> 
+        <td>Computer Science</td> 
+        <td>2025</td> 
+    </tr> 
+    <tr> 
+        <td>Ravi</td> 
+        <td>Information Technology</td> 
+        <td>2024</td> 
+    </tr> 
+</table> 
+</body> 
+</html>
+------------------------------------------------------------------
+4. Hospital:
+index.html:
+<html>
+<frameset rows="20%,80%">
+    <frame src="header.html">
+    <frameset cols="20%,80%">
+        <frame src="menu.html">
+        <frame src="about.html" name="main">
+    </frameset>
+</frameset>
+</html>
+
+header.html:
+<html>
+<body bgcolor="lightblue">
+<h1 align="center">
+City Hospital
+</h1>
+</body>
+</html>
+
+menu.html:
+<html>
+<body bgcolor="lightgray">
+<h3>Menu</h3>
+<a href="about.html" target="main">About</a>
+<br><br>
+<a href="services.html" target="main">Services</a>
+<br><br>
+<a href="contact.html" target="main">Contact</a>
+</body>
+</html>
+
+about.html:
+<html>
+<body>
+<h2>About Us</h2>
+<p>
+City Hospital provides quality healthcare services with experienced doctors and modern facilities.
+</p>
+</body>
+</html>
+
+services.html:
+<html>
+<body>
+<h2>Our Services</h2>
+<ul>
+    <li>Emergency Care</li>
+    <li>Cardiology</li>
+    <li>Laboratory</li>
+    <li>Pharmacy</li>
+</ul>
+</body>
+</html>
+
+contact.html:
+<html>
+<body>
+<h2>Contact Us</h2>
+<p>Phone: +91 9876543210</p>
+<p>Email: cityhospital@gmail.com</p>
+</body>
+</html>
+---------------------------------------------------------------------------
+5. Biodata:
+<!DOCTYPE html> 
+<html> 
+<head>    <title>Personal Bio-Data Form</title>    <style> 
+        body { 
+            font-family: "Segoe UI", sans-serif; 
+            background: #f0f5ff; 
+            margin: 0; 
+            padding: 0; 
+        } 
+        .container { 
+            width: 450px; 
+            background: white; 
+            padding: 25px; 
+            margin: 40px auto; 
+            border-radius: 12px; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+        } 
+        h2 { 
+            text-align: center; 
+            color: #003d99; 
+            margin-bottom: 20px; 
+        } 
+        label { 
+            font-weight: bold; 
+            display: block; 
+            margin-top: 10px; 
+        } 
+        input, textarea, button, select { 
+            width: 100%; 
+            padding: 8px; 
+            margin-top: 5px; 
+            border-radius: 6px; 
+            border: 1px solid #aaa; 
+        } 
+        button { 
+            background: #003d99; 
+            color: white; 
+            border: none; 
+            margin-top: 15px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            padding: 10px; 
+        } 
+        button:hover { 
+            background: #002b73; 
+        } 
+        #result { 
+            margin-top: 25px; 
+            padding: 20px; 
+            background: #e6f0ff; 
+            border-left: 4px solid #003d99; 
+            border-radius: 8px; 
+        } 
+        p { 
+            margin: 6px 0; 
+        } 
+    </style>    <script> 
+        function showData() { 
+            document.getElementById("result").innerHTML = ` 
+                <h3>Your Bio-Data</h3> 
+                <p><b>Full Name:</b> ${document.getElementById("name").value}</p> 
+ 
+                <p><b>Date of Birth:</b> ${document.getElementById("dob").value}</p> 
+                <p><b>Gender:</b> 
+${document.querySelector('input[name="gender"]:checked')?.value}</p> 
+                <p><b>Email:</b> ${document.getElementById("email").value}</p> 
+                <p><b>Phone Number:</b> ${document.getElementById("phone").value}</p> 
+                <p><b>Address:</b> ${document.getElementById("address").value}</p> 
+                <p><b>City:</b> ${document.getElementById("city").value}</p> 
+                <p><b>State:</b> ${document.getElementById("state").value}</p> 
+                <p><b>Qualifications:</b> ${document.getElementById("qual").value}</p> 
+                <p><b>Hobbies:</b> ${document.getElementById("hobbies").value}</p>  `; 
+        }    </script> </head> <body> 
+ 
+<div class="container"> 
+    <h2>Personal Bio-Data Form</h2> 
+    <label>Full Name:</label> 
+    <input type="text" id="name"> 
+    <label>Date of Birth:</label> 
+    <input type="date" id="dob"> 
+    <label>Gender:</label> 
+    <input type="radio" name="gender" value="Male"> Male   
+    <input type="radio" name="gender" value="Female"> Female   
+    <input type="radio" name="gender" value="Other"> Other   
+    <label>Email:</label> 
+    <input type="email" id="email"> 
+    <label>Phone Number:</label> 
+    <input type="text" id="phone"> 
+    <label>Address:</label> 
+    <textarea id="address" rows="3"></textarea> 
+    <label>City:</label> 
+    <input type="text" id="city"> 
+    <label>State:</label> 
+    <input type="text" id="state"> 
+    <label>Qualifications:</label> 
+    <textarea id="qual" rows="3"></textarea>    <label>Hobbies:</label> 
+    <textarea id="hobbies" rows="3"></textarea> 
+ 
+    <button onclick="showData()">Submit</button> 
+    <div id="result"></div>  </div> </body> </html>
+-----------------------------------------------
+6. Registration form:
+<!DOCTYPE html> 
+<html> 
+<head>    <title>Registration Form</title> <style> 
+    body { 
+        font-family: Arial, sans-serif; 
+        background: #f2f2f2; 
+        margin: 0; 
+        padding: 0; 
+    } 
+    .container { 
+        width: 350px; 
+        background: white; 
+        padding: 20px; 
+        margin: 50px auto; 
+        border-radius: 10px; 
+        box-shadow: 0 0 10px #aaa; 
+    } 
+    h2 { 
+        text-align: center; 
+        color: #333; 
+    } 
+    label { 
+        display: block; 
+        margin-top: 10px; 
+        font-weight: bold; 
+    } 
+    input { 
+        width: 100%; 
+        padding: 7px; 
+        margin-top: 5px; 
+        border-radius: 5px; 
+        border: 1px solid #ccc; 
+        box-sizing: border-box; 
+    } 
+    button { 
+        width: 100%; 
+        padding: 10px; 
+        margin-top: 15px; 
+        background: #0275d8; 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+     font-size: 16px; 
+        cursor: pointer; 
+    } 
+    button:hover { 
+        background: #025aa5; 
+    } 
+    #notification { 
+        margin-top: 15px; 
+        padding: 10px; 
+        background: #d4edda; 
+        color: #155724; 
+        border-radius: 5px; 
+        display: none; 
+        text-align: center; 
+    } 
+</style> 
+    <script> 
+        function validateForm(event) { 
+            event.preventDefault(); // prevent default form submission       
+            var name = document.getElementById("name").value.trim(); 
+            var place = document.getElementById("place").value.trim(); 
+            var email = document.getElementById("email").value.trim(); 
+            var phone = document.getElementById("phone").value.trim(); 
+            if(name === "") { alert("Enter Name"); return; } 
+            if(place === "") { alert("Enter College/Place"); return; } 
+            if(email === "") { alert("Enter Email"); return; } 
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+            if(!emailPattern.test(email)) { alert("Invalid Email"); return; } 
+            if(phone === "" || phone.length != 10 || isNaN(phone)) { alert("Invalid Phone"); return; } 
+            // Display notification 
+            var note = document.getElementById("notification"); 
+            note.innerHTML = `Thank you ${name}! Your registration is successful.`; 
+            note.style.display = "block"; 
+            // Optional: Clear the form 
+            document.getElementById("regForm").reset(); 
+        } 
+    </script></head><body> 
+<div class="container"> 
+    <h2>Registration Form</h2> 
+    <form id="regForm" onsubmit="validateForm(event)"> 
+        <label>Name:</label> 
+        <input type="text" id="name" placeholder="Enter your full name"> 
+        <label>College/Place:</label> 
+        <input type="text" id="place" placeholder="Enter your college/place"> 
+        <label>Email:</label> 
+        <input type="email" id="email" placeholder="Enter your email"> 
+        <label>Phone Number:</label> 
+        <input type="text" id="phone" placeholder="Enter 10-digit phone number"> 
+        <button type="submit">Submit</button> 
+    </form> 
+    <div id="notification"></div> 
+</div> 
+</body> 
+</html>
+--------------------------------
+7. Customer details xml, xsl:
+customer.xml:
+<?xml version="1.0" encoding="UTF-8"?> 
+<customers> 
+    <customer id="C001"> 
+        <name>John Doe</name> 
+        <email>john@example.com</email> 
+        <phone>9876543210</phone> 
+    </customer> 
+    <customer id="C002"> 
+        <name>Jane Smith</name> 
+        <email>jane@example.com</email> 
+        <phone>9123456780</phone> 
+    </customer> 
+    <customer id="C003"> 
+        <name>Michael Brown</name> 
+        <email>michael@example.com</email> 
+        <phone>9988776655</phone> 
+    </customer> 
+</customers>
+
+customer.xsl:
+<?xml version="1.0" encoding="UTF-8"?> 
+<xsl:stylesheet version="1.0" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
+<xsl:template match="/"> 
+<html> 
+<head> 
+    <style> 
+        table { 
+            border-collapse: collapse; 
+            width: 60%; 
+        } 
+        th, td { 
+            border: 1px solid #000; 
+            padding: 8px; 
+        } 
+        th { 
+            background: #eee; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <table> 
+        <tr> 
+            <th>ID</th><th>Name</th><th>Email</th><th>Phone</th> 
+        </tr> 
+        <xsl:for-each select="/customers/customer"> 
+        <tr> 
+            <td><xsl:value-of select="@id"/></td> 
+            <td><xsl:value-of select="name"/></td> 
+            <td><xsl:value-of select="email"/></td> 
+            <td><xsl:value-of select="phone"/></td> 
+        </tr> 
+        </xsl:for-each> 
+    </table> 
+</body> 
+</html> 
+</xsl:template> </xsl:stylesheet> 
+
+index.html:
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Customer Details</title> 
+</head> 
+<body> 
+<h1>Customer Details (XSLT - Works in Edge)</h1> 
+<div id="output"></div> 
+<script> 
+// Load XML & XSL, then transform 
+async function loadXML(url) { 
+    const response = await fetch(url); 
+    const text = await response.text(); 
+    return new window.DOMParser().parseFromString(text, "text/xml"); 
+} 
+async function transform() { 
+    const xml = await loadXML("customer.xml"); 
+    const xsl = await loadXML("customer.xsl"); 
+    const processor = new XSLTProcessor(); 
+    processor.importStylesheet(xsl); 
+    const result = processor.transformToFragment(xml, document); 
+    document.getElementById("output").appendChild(result); 
+} 
+transform(); 
+</script></body></html> 
+
+VS code >> Live server (Ritwick Dey) >> Go to Live button or ALT + L and ALT + O. 
+-------------------------------------
+8. Student Personal Details:
+stu.xml:
+<?xml version="1.0" encoding="UTF-8"?> 
+<students> 
+    <student> 
+        <id>1</id> 
+        <name>John Doe</name> 
+        <dob>2000-05-10</dob> 
+        <gender>Male</gender> 
+        <email>john@example.com</email> 
+        <phone>1234567890</phone> 
+        <address> 
+            <street>123 Main Street</street> 
+            <city>Chennai</city> 
+            <state>Tamil Nadu</state> 
+            <zip>600001</zip> 
+        </address> 
+        <course>B.Sc Computer Science</course> 
+        <hobbies>Reading, Coding, Music</hobbies> 
+    </student> 
+    <student> 
+        <id>2</id> 
+        <name>Jane Smith</name> 
+        <dob>2001-08-15</dob> 
+        <gender>Female</gender> 
+        <email>jane@example.com</email> 
+        <phone>9876543210</phone> 
+        <address> 
+            <street>45 Park Avenue</street> 
+            <city>Delhi</city> 
+            <state>Delhi</state> 
+            <zip>110001</zip> 
+        </address> 
+        <course>B.Com</course> 
+        <hobbies>Drawing, Swimming</hobbies> 
+    </student> 
+</students>
+
+readmeXML.js:
+const fs = require("fs"); 
+const xml2js = require("xml2js"); 
+// Read XML file 
+const xmlData = fs.readFileSync("stu.xml", "utf-8"); 
+ 
+// Parse XML 
+const parser = new xml2js.Parser(); 
+parser.parseString(xmlData, (err, result) => { 
+    if (err) throw err; 
+    const students = result.students.student; 
+    students.forEach(s => { 
+        console.log("Name:", s.name[0]); 
+        console.log("Course:", s.course[0]); 
+        console.log("----------------------------"); 
+    }); 
+});
+
+--> Terminal:
+npm install xml2js  
+node readXML.js
+-----------------------------------------------------------------------------------
+
