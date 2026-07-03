@@ -52,6 +52,9 @@ if (isset($_POST['submit'])) {
 ?>
 Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 2
 Title:
 Passing Array to Function
@@ -80,6 +83,9 @@ displayArray($colors);
 ?>
 Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 3
 Title:
 User Details Form using POST
@@ -123,6 +129,9 @@ echo "Age: " . $age . "<br>";
 ?>
 Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 4
 Title:
 Conditional Statements and Loops
@@ -161,6 +170,9 @@ echo "$num x $i = " . ($num * $i) . "<br>";
 ?>
 Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 5
 Title:
 Functions with Default Arguments
@@ -222,6 +234,9 @@ echo "<h3>Result: $result</h3>";
 </html>
 Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 6
 Title:
 PHP Class with Private and Protected Members
@@ -267,6 +282,8 @@ $obj->showBalance();
 ?>
 Result:
 Thus the program was executed successfully.
+
+
 Lab Program 7
 Title:
 Multilevel Inheritance with Constructor
@@ -324,6 +341,9 @@ $mgr = new Manager("Vishnu", 60000, "IT");
 $mgr->display();
 ?>Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 8
 Title:
 File Handling Read and Write
@@ -375,6 +395,9 @@ fclose($file);
 ?>
 Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 9
 Title:
 Database Insert and Display
@@ -470,6 +493,9 @@ echo "</table>";
 ?>
 Result:
 Thus the program was executed successfully.
+
+
+
 Lab Program 10
 Title:
 Session Handling
