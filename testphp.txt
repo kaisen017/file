@@ -1,0 +1,696 @@
+PHP PRACTICAL LAB
+Lab Program 1
+Title:
+String Handling using User Input
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+Aim
+To write a PHP program to perform basic string handling operations.
+Program
+Html file (form.html)
+<!DOCTYPE html>
+<html>
+<head>
+ <title>String Handling</title>
+</head>
+<body>
+<h2>String Handling Operations</h2>
+<form method="post" action="process.php">
+ Enter a String:
+ <input type="text" name="str" required>
+ <br><br>
+ <input type="submit" name="submit" value="Process">
+</form>
+</body>
+</html>
+php file (process.php)
+<?php
+if (isset($_POST['submit'])) {
+ // Get user input
+ $str = $_POST['str'];
+ echo "<br><b>Original String:</b> " . $str . "<br><br>";
+ // 1. Find the length of a string
+ echo "Length of the string: " . strlen($str) . "<br><br>";
+ // 2. Convert case
+ echo "Uppercase: " . strtoupper($str) . "<br>";
+ echo "Lowercase: " . strtolower($str) . "<br><br>";
+ // 3. Reverse the string
+ echo "Reversed String: " . strrev($str) . "<br><br>";
+ // 4. Replace word (example)
+ echo "After Replacing 'PHP' with 'Web': " . str_replace("PHP", "Web", $str) .
+"<br><br>";
+ // 5. Extract part of string
+ echo "Extracted String (first 7 characters): " . substr($str, 0, 7);
+}
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 2
+Title:
+Passing Array to Function
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<?php
+// Function to display array elements
+function displayArray($arr)
+{
+echo "Array Elements are:<br>";
+foreach ($arr as $value) {
+echo $value . "<br>";
+}
+}
+// Array declaration
+$colors = array("Red", "Green", "Blue", "Yellow");
+// Function call
+displayArray($colors);
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 3
+Title:
+User Details Form using POST
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+Html file( userform.html)
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Details Form</title>
+</head>
+<body>
+<h2>User Details Form</h2>
+<form method="post" action="submit.php ">
+Name: <input type="text" name="name" required><br><br>
+Email: <input type="email" name="email" required><br><br>
+Age: <input type="number" name="age" required><br><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+</body>
+</html>
+php file (submit.php)
+<?php
+// Check whether form is submitted
+if (isset($_POST['submit'])) {
+$name = $_POST['name'];
+$email = $_POST['email'];
+$age = $_POST['age'];
+echo "<h3>Entered User Details</h3>";
+echo "Name: " . $name . "<br>";
+echo "Email: " . $email . "<br>";
+echo "Age: " . $age . "<br>";
+}
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 4
+Title:
+Conditional Statements and Loops
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<?php
+// Conditional statement using switch
+$marks = 78;
+echo "Marks: " . $marks . "<br>";
+switch (true) {
+case ($marks >= 90):
+echo "Grade: A<br><br>";
+break;
+case ($marks >= 75):
+echo "Grade: B<br><br>";
+break;
+case ($marks >= 60):
+echo "Grade: C<br><br>";
+break;
+default:
+echo "Grade: Fail<br><br>";
+}
+// Loop example - Multiplication table
+$num = 5;
+echo "Multiplication Table of $num:<br>";
+for ($i = 1; $i <= 10; $i++) {
+echo "$num x $i = " . ($num * $i) . "<br>";
+}
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 5
+Title:
+Functions with Default Arguments
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator using Radio Buttons</title>
+</head>
+<body>
+<h2>PHP Calculator (Default Arguments)</h2>
+<form method="post">
+First Number:
+<input type="number" name="num1"><br><br>
+Second Number:
+<input type="number" name="num2"><br><br>
+Select Operation:<br>
+<input type="radio" name="operation" value="add" checked> Addition<br>
+<input type="radio" name="operation" value="sub"> Subtraction<br>
+<input type="radio" name="operation" value="mul"> Multiplication<br>
+<input type="radio" name="operation" value="div"> Division<br><br>
+<input type="submit" name="calculate" value="Calculate">
+</form>
+<?php
+// Function with default arguments
+function calculator($a = 0, $b = 0, $op = "add")
+{
+switch ($op) {
+case "add":
+return $a + $b;
+case "sub":
+return $a - $b;
+case "mul":
+return $a * $b;
+case "div":
+return ($b != 0) ? $a / $b : "Cannot divide by zero";
+default:
+return "Invalid Operation";
+}
+}
+// Handle form submission
+if (isset($_POST['calculate'])) {
+$num1 = $_POST['num1'] ?? 0;
+$num2 = $_POST['num2'] ?? 0;
+$operation = $_POST['operation'] ?? "add";
+$result = calculator($num1, $num2, $operation);
+echo "<h3>Result: $result</h3>";
+}
+?>
+</body>
+</html>
+Result:
+Thus the program was executed successfully.
+Lab Program 6
+Title:
+PHP Class with Private and Protected Members
+Aim:
+To write a PHP program to demonstrate private and protected access modifiers.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<?php
+class Account
+{
+private $accountNumber;
+protected $balance;
+// Constructor
+function __construct($accNo, $bal)
+{
+$this->accountNumber = $accNo;
+$this->balance = $bal;
+}
+// Public method to display details
+public function showAccount()
+{
+echo "Account Number: " . $this->accountNumber . "<br>";
+echo "Balance: " . $this->balance . "<br>";
+}
+}
+// Child class
+class SavingsAccount extends Account
+{
+public function showBalance()
+{
+echo "Balance from Child Class: " . $this->balance;
+}
+}
+// Object creation
+$obj = new SavingsAccount("ACC123", 5000);
+$obj->showAccount();
+$obj->showBalance();
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 7
+Title:
+Multilevel Inheritance with Constructor
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<?php
+// Grandparent class
+class Person
+{
+protected $name;
+function __construct($n)
+{
+$this->name = $n;
+echo "Person Constructor Called<br>";
+}
+}
+// Parent class
+class Employee extends Person
+{
+protected $salary;
+function __construct($n, $s)
+{
+parent::__construct($n);
+$this->salary = $s;
+echo "Employee Constructor Called<br>";
+}
+}
+// Child class
+class Manager extends Employee
+{
+private $department;
+function __construct($n, $s, $d)
+{
+parent::__construct($n, $s);
+$this->department = $d;
+echo "Manager Constructor Called<br>";
+}
+function display()
+{
+echo "<br><b>Details:</b><br>";
+echo "Name: " . $this->name . "<br>";
+echo "Salary: " . $this->salary . "<br>";
+echo "Department: " . $this->department . "<br>";
+}
+}
+// Object creation
+$mgr = new Manager("Vishnu", 60000, "IT");
+$mgr->display();
+?>Result:
+Thus the program was executed successfully.
+Lab Program 8
+Title:
+File Handling Read and Write
+Aim
+To write a PHP program to accept text from a form, store it in a file, and display the file
+contents.
+Algorithm
+1. Create an HTML form to accept user input.
+2. Send data using POST method.
+3. Open a file in write/append mode.
+4. Write form data into the file.
+5. Read the file contents.
+6. Display the output.
+Source Code:
+File 1: file_form.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>File Handling Using Form</title>
+</head>
+<body>
+<h2>Enter Text to Store in File</h2>
+<form method="post" action="file_process.php">
+<textarea name="content" rows="5" cols="40" required></textarea><br><br>
+<input type="submit" value="Save to File">
+</form>
+</body>
+</html>
+File 2: file_process.php
+<?php
+if(isset($_POST['content']))
+{
+$data = $_POST['content'];
+$filename = "data.txt";
+// Write to file (append mode)
+$file = fopen($filename, "a");
+fwrite($file, $data . "\n");
+fclose($file);
+echo "<b>Data stored successfully!</b><br><br>";
+// Read file content
+$file = fopen($filename, "r");
+echo "<b>File Contents:</b><br>";
+while(!feof($file))
+{
+echo nl2br(fgets($file));
+}
+fclose($file);
+}
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 9
+Title:
+Database Insert and Display
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<?php
+$conn=mysqli_connect("localhost","root","","testdb");
+mysqli_query($conn,"insert into student values(1,'Vishnu')");
+$result=mysqli_query($conn,"select * from student");
+while($row=mysqli_fetch_assoc($result)){
+echo $row['id']." ".$row['name']."<br>";
+}
+?>
+Database Insert and Display Records
+Aim
+To write a PHP program to insert records into a database and display them.
+Requirements
+● XAMPP Server
+● MySQL Database
+● PHP
+Step 1: Create Database & Table (MySQL)
+CREATE DATABASE college;
+USE college;
+CREATE TABLE students (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(50),
+email VARCHAR(50)
+);
+Step 2: Database Connection File
+File: db_connect.php
+<?php
+$conn = mysqli_connect("localhost", "root", "", "college");
+if(!$conn)
+{
+die("Connection Failed: " . mysqli_connect_error());
+}
+?>
+Step 3: HTML Form for Insert
+File: student_form.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Entry</title>
+</head>
+<body>
+<h2>Student Registration</h2>
+<form method="post" action="insert_display.php">
+Name: <input type="text" name="name" required><br><br>
+Email: <input type="email" name="email" required><br><br>
+<input type="submit" name="submit" value="Save">
+</form>
+</body>
+</html>
+Step 4: Insert and Display Records
+File: insert_display.php
+<?php
+include("db_connect.php");
+// Insert Data
+if(isset($_POST['submit']))
+{
+$name = $_POST['name'];
+$email = $_POST['email'];
+$sql = "INSERT INTO students(name, email)
+VALUES('$name', '$email')";
+mysqli_query($conn, $sql);
+echo "<b>Record Inserted Successfully!</b><br><br>";
+}
+// Display Data
+$result = mysqli_query($conn, "SELECT * FROM students");
+echo "<h3>Student Details</h3>";
+echo "<table border='1'>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+</tr>";
+while($row = mysqli_fetch_assoc($result))
+{
+echo "<tr>
+<td>".$row['id']."</td>
+<td>".$row['name']."</td>
+<td>".$row['email']."</td>
+</tr>";
+}
+echo "</table>";
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 10
+Title:
+Session Handling
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<?php
+session_start();
+$_SESSION['user']="Vishnu";
+echo $_SESSION['user'];
+?>
+Aim
+To write a PHP program to create, access, and destroy a session.
+Theory (Short)
+● A session is used to store user information on the server.
+● Session data is available across multiple pages.
+● session_start() must be called before using sessions.
+Important Session Functions
+● session_start() – starts a session
+● $_SESSION[] – store/retrieve session data
+● session_destroy() – destroy session
+● unset() – remove session variable
+Program
+File 1: login.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Session Login</title>
+</head>
+<body>
+<h2>Login Page</h2>
+<form method="post" action="session_set.php">
+Username: <input type="text" name="username" required><br><br>
+<input type="submit" value="Login">
+</form>
+</body>
+</html>
+File 2: session_set.php
+<?php
+session_start();
+if(isset($_POST['username']))
+{
+$_SESSION['user'] = $_POST['username'];
+echo "Session Created Successfully!<br><br>";
+echo "<a href='session_get.php'>Go to Dashboard</a>";
+}
+?>
+File 3: session_get.php
+<?php
+session_start();
+if(isset($_SESSION['user']))
+{
+echo "<h2>Welcome " . $_SESSION['user'] . "</h2>";
+echo "<a href='logout.php'>Logout</a>";
+}
+else
+{
+echo "No active session!";
+}
+?>
+File 4: logout.php
+<?php
+session_start();
+session_destroy();
+echo "Session Destroyed Successfully!";
+echo "<br><a href='login.html'>Login Again</a>";
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 11
+Title:
+Cookies Handling
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<?php
+setcookie("user","Vishnu",time()+3600);
+echo $_COOKIE['user'];
+?>
+Aim
+To write a PHP program to set, read, and delete cookies.
+Theory (Short)
+● A cookie is small data stored on the user’s browser.
+● Cookies are used to remember user preferences.
+● setcookie() is used to create cookies.
+Important Cookie Functions
+● setcookie() – create cookie
+● $_COOKIE[] – read cookie
+● time() – set expiry time
+Program
+File 1: cookie_form.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cookie Example</title>
+</head>
+<body>
+<h2>Set Cookie</h2>
+<form method="post" action="set_cookie.php">
+Enter Name: <input type="text" name="username" required><br><br>
+<input type="submit" value="Set Cookie">
+</form>
+</body>
+</html>
+File 2: set_cookie.php
+<?php
+if(isset($_POST['username']))
+{
+$name = $_POST['username'];
+// Cookie expires in 1 hour
+setcookie("user", $name, time() + 3600);
+echo "Cookie Created Successfully!<br><br>";
+echo "<a href='get_cookie.php'>View Cookie</a>";
+}
+?>
+File 3: get_cookie.php
+<?php
+if(isset($_COOKIE['user']))
+{
+echo "<h2>Welcome " . $_COOKIE['user'] . "</h2>";
+echo "<a href='delete_cookie.php'>Delete Cookie</a>";
+}
+else
+{
+echo "Cookie not found!";
+}
+?>
+File 4: delete_cookie.php
+<?php
+// Set expiry time in the past to delete cookie
+setcookie("user", "", time() - 3600);
+echo "Cookie Deleted Successfully!";
+echo "<br><a href='cookie_form.html'>Set Again</a>";
+?>
+Result:
+Thus the program was executed successfully.
+Lab Program 12
+Title:
+AJAX Request Handling
+Aim:
+To implement the given PHP concept.
+Algorithm:
+1. Start
+2. Write PHP code
+3. Run on XAMPP
+4. Observe Output
+5. Stop
+Source Code:
+<!-- index.html -->
+<html>
+<body>
+<button onclick="load()">Click</button>
+<div id="demo"></div>
+<script>
+function load(){
+var x=new XMLHttpRequest();
+x.onreadystatechange=function(){
+if(this.readyState==4 && this.status==200)
+document.getElementById("demo").innerHTML=this.responseText;
+};
+x.open("GET","server.php",true);
+x.send();
+}
+</script>
+</body>
+</html>
+<!-- server.php -->
+<?php
+echo "Hello from Server";
+?>
+Result:
+Thus the program was executed successfully.
+Aim
+To write a PHP program to handle an AJAX request and display response without
+reloading the page.
+Theory (Short)
+● AJAX = Asynchronous JavaScript and XML
+● Used to communicate with server without refreshing the page
+● Commonly uses XMLHttpRequest
+Program
+File 1: ajax_form.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>AJAX Example</title>
+<script>
+function loadMessage()
+{
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "ajax_server.php", true);
+xhr.onreadystatechange = function ()
+{
+if (xhr.readyState == 4 && xhr.status == 200)
+{
+document.getElementById("result").innerHTML = xhr.responseText;
+}
+};
+xhr.send();
+}
+</script>
+</head>
+<body>
+<h2>AJAX Request Handling</h2>
+<button onclick="loadMessage()">Click Me</button>
+<br><br>
+<div id="result"></div>
+</body>
+</html>
+File 2: ajax_server.php
+<?php
+echo "Hello! This message is from PHP using AJAX.";
+?>
